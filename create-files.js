@@ -1,39 +1,39 @@
 const fs = require('fs');
 
 const animals = [
-    'dog',
-    'cat',
-    'zebra',
-    'sloth',
-    'giraffe',
-    'koala',
-    'horse'
+  'dog',
+  'cat',
+  'zebra',
+  'sloth',
+  'giraffe',
+  'koala',
+  'horse'
 ];
 
 const getAnimal = () => {
-    const index = Math.floor(Math.random() * animals.length);
-    return animals[index];
+  const index = Math.floor(Math.random() * animals.length);
+  return animals[index];
 };
 
 const createFiles = (directory, count, callback) => {
-    let writtenSoFar = 0;
+  let writtenSoFar = 0;
 
  
-    for(let i = 0; i < count; i++) {
+  for(let i = 0; i < count; i++) {
     
-        fs.writeFile(`${directory}/${i}.txt`, getAnimal(), err => {
+    fs.writeFile(`${directory}/${i}.txt`, getAnimal(), err => {
   
-            if(err) return callback(err);
+      if(err) return callback(err);
 
-            writtenSoFar += 1;
+      writtenSoFar += 1;
 
    
-            if(writtenSoFar === count) callback();
-        });
-    }
+      if(writtenSoFar === count) callback();
+    });
+  }
 };
 
 module.exports = {
-    getAnimal,
-    createFiles
+  getAnimal,
+  createFiles
 };
