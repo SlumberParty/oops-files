@@ -1,0 +1,26 @@
+{
+  "name": "oops-files",
+  "version": "1.0.0",
+  "description": "## steps:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --runInBand",
+    "test:watch": "npm run test -- --watch",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlumberParty/oops-files.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlumberParty/oops-files/issues"
+  },
+  "homepage": "https://github.com/SlumberParty/oops-files#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}
