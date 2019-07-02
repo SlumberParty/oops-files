@@ -10,4 +10,6 @@ describe('rename files', () => {
   afterEach(done => {
     fs.unlink(join(__dirname, '1.txt'), done);
   })
+
+  it('')
 });
